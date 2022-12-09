@@ -1,6 +1,6 @@
 # CSS Snippet Cheatsheet
 
-## Description
+## Description / Usage
 CSS Design task
 - Responsive site; resizes for various screen sizes
 - Interactive
