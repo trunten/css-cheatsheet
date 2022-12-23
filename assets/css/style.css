@@ -31,40 +31,14 @@ header p {
     display: grid;
     width: 100%;
     margin-top: 50px;
-    grid-template-columns: repeat(3, 33%);
-    grid-template-areas: 
-        "flexboxRow flexboxColumn cssGrid"
-        "linearGradient transition titleOveraly";
-}
-
-#flexboxRow {
-    grid-area: flexboxRow;
-} 
-
-#flexboxColumn {
-    grid-area: flexboxColumn;
-} 
-
-#cssGrid {
-    grid-area: cssGrid;
-} 
-
-#linearGradient {
-    grid-area: linearGradient;
-}    
-
-#transition {
-    grid-area: transition;
-} 
-
-#titleOveraly {
-    grid-area: titleOveraly;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    row-gap: 60px;
+    column-gap: 20px;
 }
 
 .contentCard {
     border: 1px dashed #fff;
     padding: 10px 20px;
-    margin: 30px 10px;
 }
 
 .contentCardCode {
@@ -171,28 +145,9 @@ footer {
     from {bottom: 30px; opacity: 1;}
     to {bottom: 0; opacity: 0;}
   }
-
 /* End of popup CSS */
 
-
-@media screen and (max-width: 992px) {
-    #contentGrid {
-        grid-template-columns: repeat(2, 50%);
-        grid-template-areas: 
-            "flexboxRow flexboxColumn"
-            "cssGrid linearGradient"
-            "transition titleOveraly";
-    }
-}
-
+/* Responsive styles */
 @media screen and (max-width: 768px) {
-    #contentGrid {
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-            "flexboxRow" "flexboxColumn"
-            "cssGrid" "linearGradient"
-            "transition" "titleOveraly";
-    }
-
     header h1 { font-size: 2em;}
 }
